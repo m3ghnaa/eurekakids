@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<head> 
+<title> Eureka Kids </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <link rel="stylesheet" type="text/css" href="home.css"> 
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Pacifico|Josefin+Slab|Permanent+Marker&display=swap" rel="stylesheet">
+
+    <style>
+    	
+    	#map{
+    		height: 300px;
+    		width: 100%;
+    	}
+
+    </style>
+</head>
+
+<body>
+
+	<div class = "container"> 
+
+		<div class = "header clearfix">
+				<ul class = "nav nav-pills pull-right">
+					<li> <a href = "home.html"> Home</a></li>
+
+					<li class = "active"> <a href = "contact.html"> Contact</a></li>
+				</ul>
+				<a class="navbar-brand" href="home.html">
+          <img src="http://placehold.it/150x50?text=Logo" alt="">
+        </a>
+				<h3 class = "text-muted"> Eureka Kids </h3>
+		 </div>
+
+		 <div class = "jumbotron"> 
+		 	<h1 class = "heading"> Contact Us </h1>
+		 	<hr/>
+
+		 	<p class = "lead"> 
+		 		Email Id: eurekakids@gmail.com
+		 		<br/>
+		 		<br/>
+		 		Address: Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum
+		 	</p>
+		 </div>
+
+		 <div id = "map"> </div>
+
+		 <script>
+		 	function initMap() {
+		 			var location = {lat: 20.421049,lng: 72.840279};
+		 			var map = new google.maps.Map(document.getElementById("map"), {
+		 				zoom: 12,
+		 				center: location
+		 			});
+
+		 			var marker = new google.maps.Marker({
+		 				position: location,
+		 				map: map
+		 			});
+		 		}
+		  </script>
+		 <script async defer
+           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCtA3jqUlVuQVcR85IJuDZwA6t9xafTTs&callback=initMap">
+         </script>
+
+
+      <footer class="footer">
+        </footer>
+
+	</div>
+
+</body>
+
+</html>
