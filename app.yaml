@@ -1,1 +1,17 @@
+runtime: python27
+api_version: 1
+threadsafe: true
 
+handlers:
+- url: /
+  static_files: www/home.html
+  upload: www/home.html
+
+- url: /(.*)
+  static_files: www/\1
+  upload: www/(.*)
+
+- url: /contact.html
+  static_files: www/contact.html
+  upload: www/contact.html
+  
